@@ -1,0 +1,36 @@
+{
+  "name": "customjs",
+  "version": "1.0.0",
+  "description": "Extension that allows to inject custom javascript and styles in any web",
+  "main": "app/popup.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/danyg/customjs.git"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "custom",
+    "javascript",
+    "inject",
+    "javascript",
+    "websites",
+    "inject",
+    "styles",
+    "websites"
+  ],
+  "author": "Daniel Goberitz <dalgo86@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danyg/customjs.git/issues"
+  },
+  "homepage": "https://github.com/danyg/customjs.git#readme",
+  "dependencies": {
+    "ace-builds": "^1.2.6",
+    "require-css": "^0.1.8",
+    "requirejs": "^2.3.2"
+  }
+}
