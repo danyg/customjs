@@ -2,10 +2,65 @@
 * @Author: Daniel Goberitz
 * @Date:   2017-02-18 17:37:36
 * @Last Modified by:   danyg
-* @Last Modified time: 2017-02-18 17:37:50
+* @Last Modified time: 2017-02-18 19:03:17
 */
 
- #editor {
-	width: 500px;
-	height: 400px;
+#container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: column;
+}
+
+#container ul.tabs {
+	width: 100%;
+	background: #222;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: row;
+	border: solid 1px #888;
+	border-width: 1px 0px;
+}
+
+#container ul.tabs .tab {
+	cursor: pointer;
+	background: #444;
+	color: #eee;
+	border: solid 1px #888;
+	border-left-color: #666; /** inactive */
+	border-right-color: #444; /* 3d effect */
+	border-width: 0px 1px 0px 5px;
+
+	line-height: 20px;
+	padding: 0px 4px;
+	outline-width: 0px 5px 0px 0px;
+	outline-color: none #444 none none;
+	min-width: 100px;
+}
+#container ul.tabs .tab.active {
+	border-left-color: #10ee10; /** active */
+}
+#container .content-container {
+	position: relative;
+	width: 100%;
+    height: 100%;
+}
+#container .content-container .tab {
+	position: absolute;
+	width: 100%;
+    height: 100%;
+	z-index: 1;
+}
+#container .content-container .tab.active {
+	z-index: 2;
+}
+
+.editor {
+	width: 100%;
+	height: 100%;
 }

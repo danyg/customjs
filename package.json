@@ -30,7 +30,10 @@
   "homepage": "https://github.com/danyg/customjs.git#readme",
   "dependencies": {
     "ace-builds": "^1.2.6",
+    "jquery": "^3.1.1",
+    "mousetrap": "^1.6.0",
     "require-css": "^0.1.8",
-    "requirejs": "^2.3.2"
+    "requirejs": "^2.3.2",
+    "requirejs-text": "^2.0.15"
   }
 }
