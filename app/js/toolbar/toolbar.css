@@ -2,14 +2,14 @@
 * @Author: Daniel Goberitz
 * @Date:   2017-02-18 22:24:14
 * @Last Modified by:   danyg
-* @Last Modified time: 2017-02-19 12:01:55
+* @Last Modified time: 2017-02-19 12:42:25
 */
 #toolbar {
 	/*background: #444;*/
 	background: linear-gradient(to bottom, #45484d 0%,#000000 100%);
 	color: #eee;
 	padding: 1px 5px;
-	height: 2.2em;
+	height: 2.4em;
     line-height: 1.8em;
 	list-style: none;
 	display: flex;
@@ -19,24 +19,27 @@
 }
 
 #toolbar li {
-	margin: 1px 5px 1px 1px;
+	margin: 1px 3px 1px 1px;
 }
 
 #toolbar .btn {
 	padding: 0em .4em;
-	background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 36%,#28343b 100%);
-	border: none;
+	background: #222 linear-gradient(to bottom, #111111 0%, #2a2a2a 100%);
+	border: solid 1px #333;
+	border-color: #555 #333 #333 #555;
+
 	color: #eee;
 	border-radius: 4px;
 	cursor: pointer;
-	opacity: .9;
-	transition: opacity 200ms;
+
 	user-select: none;
+	height: 80%;
+	line-height: 1.5em;
 }
 
-#toolbar .btn:hover {
-	opacity: 1;
-}
+#toolbar .btn >* { opacity: .8; transition: opacity 200ms;}
+
+#toolbar .btn:hover >* {	opacity: 1; }
 
 #toolbar .input input {
 	width: 100%;
@@ -46,21 +49,22 @@
 }
 #toolbar .url-matcher input {
 	border-style: solid;
-	border-width: 1px 1px 1px 5px;
-	border-color: #666;
-	background: #222;
+	border: solid 1px #333;
+	border-color: #555 #333 #333 #555;
+	background: #222 linear-gradient(to bottom, #111111 0%, #2a2a2a 100%);
 	color: #eee;
 	text-indent: 5px;
 	font-family: monospace;
+	line-height: 1.4em;
 }
 #toolbar .url-matcher input:focus {
 	outline: none;
 }
 
 #toolbar .url-matcher input.passed {
-	border-left-color: lightgreen;
+	box-shadow: inset 7px 0px 18px -5px #00ff00
 }
 
 #toolbar .url-matcher input.failed {
-	border-left-color: lightpink;
+	box-shadow: inset 7px 0px 18px -5px #ff0000
 }

@@ -2,7 +2,7 @@
 * @Author: Daniel Goberitz
 * @Date:   2017-02-18 17:32:16
 * @Last Modified by:   danyg
-* @Last Modified time: 2017-02-19 12:12:33
+* @Last Modified time: 2017-02-19 12:17:10
 */
 
 define([
@@ -77,6 +77,7 @@ define([
 			var id = this._titleToId(title);
 			var $tab = $('<li class="tab" rel="' + id + '">' + title + '</li>')
 				.appendTo(this.$tabs)
+				.attr('title', title)
 				.on('click', () => {
 					this.activeTab(id);
 				})

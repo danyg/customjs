@@ -2,7 +2,7 @@
 * @Author: Daniel Goberitz
 * @Date:   2017-02-18 17:37:36
 * @Last Modified by:   danyg
-* @Last Modified time: 2017-02-19 12:11:23
+* @Last Modified time: 2017-02-19 12:43:20
 */
 
 #workarea {
@@ -17,7 +17,7 @@
 
 #workarea ul.tabs {
 	width: 100%;
-	background: #222;
+	background: #000;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -25,9 +25,9 @@
 	display: flex;
 	justify-content: flex-start;
 	flex-flow: row;
-	border: solid 1px #888;
-	border-width: 1px 0px;
+	border-width: 0px;
 	overflow: hidden;
+	border-bottom: 1px #444 solid;
 }
 #workarea .tabs-container *{
 	height: 1.6em;
@@ -36,16 +36,15 @@
 
 #workarea ul.tabs .tab {
 	cursor: pointer;
-	background: #444;
-	color: #eee;
-	border: solid 1px #888;
-	border-left-color: #666; /** inactive */
-	border-right-color: #444; /* 3d effect */
-	border-width: 0px 1px 0px 5px;
+	background: #222 linear-gradient(to bottom, #111111 0%, #2a2a2a 100%);
 
-	padding: 0px 4px;
-	outline-width: 0px 5px 0px 0px;
-	outline-color: none #444 none none;
+	color: #eee;
+	border: solid 1px #333;
+	border-color: #555 #333 #333 #555;
+	border-width: 1px 1px 1px 1px;
+
+	padding: 0px 0px;
+	text-indent: 7px;
 	min-width: 100px;
 
 	white-space: nowrap;
@@ -53,9 +52,10 @@
 	overflow: hidden;
 
 	user-select: none;
+	border-radius: 4px 4px 0px 0px;
 }
 #workarea ul.tabs .tab.active {
-	border-left-color: #10ee10; /** active */
+	box-shadow: inset 7px 0px 10px -5px #10ee10
 }
 #workarea ul.tabs .scroll-spacer {
 	min-width: 3em;
