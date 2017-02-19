@@ -2,12 +2,25 @@
 * @Author: Daniel Goberitz
 * @Date:   2017-02-18 18:38:37
 * @Last Modified by:   danyg
-* @Last Modified time: 2017-02-18 18:55:52
+* @Last Modified time: 2017-02-19 11:28:14
 */
 
-* {margin: 0; padding: 0;}
+* {margin: 0; padding: 0; box-sizing: border-box;}
 body {
 	background: #222;
-	min-width: 600px;
-	height: 600px
+	width: 600px;
+	height: 600px;
+
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: column;
+}
+
+#alertBox {
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	width: 25%;
+	min-height: 5%;
+	z-index: 2000;
 }
